@@ -1,0 +1,46 @@
+import express from 'express';
+const router = express();
+
+import * as TokenCtrl from '../controllersFrontend/token.controller';
+
+router.route('/count/get').get(TokenCtrl.CountGet);
+router.route('/category/list').get(TokenCtrl.CategoryList);
+router.route('/add/item/validation').post(TokenCtrl.AddItemValidation);
+router.route('/add/microownership').post(TokenCtrl.MicroownerValidation);
+router.route('/add/item').post(TokenCtrl.AddItem);
+router.route('/add/collection').post(TokenCtrl.AddCollection);
+router.route('/add/owner').post(TokenCtrl.AddOwner);
+router.route('/add/activity').post(TokenCtrl.AddActivity);
+router.route('/like').post(TokenCtrl.Like);
+router.route('/like/list').post(TokenCtrl.LikeList);
+router.route('/price/change').post(TokenCtrl.TokenPriceChange);
+router.route('/burn').post(TokenCtrl.Burn)
+router.route('/purchase/complete').post(TokenCtrl.PurchaseComplete);
+router.route('/collectibles/list/myitems').post(TokenCtrl.MyItems_CollectiblesList);
+router.route('/collectibles/list/getitems').post(TokenCtrl.getItems_collectiblesList);
+router.route('/collectibles/list/getOwners').post(TokenCtrl.getOwners);
+router.route('/collectibles/list/home').post(TokenCtrl.Home_CollectiblesList);
+router.route('/collectibles/list/follow').post(TokenCtrl.Follow_CollectiblesList);
+router.route('/tokenCounts').post(TokenCtrl.TokenCounts);
+router.route('/bid/apply').post(TokenCtrl.BidApply);
+router.route('/bid/accept').post(TokenCtrl.BidAccept);
+router.route('/getHotBid').post(TokenCtrl.getHotBids);
+router.route('/getBuyerSeller').post(TokenCtrl.getBuyerSeller);
+router.route('/getLatestList').post(TokenCtrl.getLatestList);
+router.route('/create/ipfsImageHashGet').post(TokenCtrl.ipfsImageHashGet);
+router.route('/getFaqLists').post(TokenCtrl.getFaqLists);
+router.route('/bid/cancel').post(TokenCtrl.BidCancel);
+router.route('/use/getcmslistinhome').post(TokenCtrl.getcmslistinhome);  
+router.route('/social/faqlists').get(TokenCtrl.faqlists);
+router.route('/microownership/list').post(TokenCtrl.getMicroownershipList);
+router.route('/addMicroSlot').post(TokenCtrl.BookingMicroSlot);
+router.route('/checkClaimShow').post(TokenCtrl.checkClaimShow);
+router.route('/tokenClaimed').post(TokenCtrl.tokenClaimed);
+router.route('/ipfsmetadata').post(TokenCtrl.IpfsMetadata);
+router.route('/checkAdminCountperToken').post(TokenCtrl.checkAdminCountperToken);
+router.route('/imagecompression').post(TokenCtrl.imagecompression);
+router.route('/getMicroHistory').post(TokenCtrl.getMicroHistory);
+router.route('/getLauchVerifyData').post(TokenCtrl.getLauchVerifyData);
+router.route('/tranfer/complete').post(TokenCtrl.TransferComplete);
+router.route('/getsettdata').get(TokenCtrl.getsettdata);
+export default router;

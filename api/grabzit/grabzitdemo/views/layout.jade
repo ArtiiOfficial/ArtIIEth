@@ -1,0 +1,12 @@
+doctype 5
+html
+  head
+    title GrabzIt Demo
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/ui.js')
+    script.
+        var ui = new UI('ajax/results?r=', 'images');
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
